@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: nesarahamed/nodeapp:latest
+        image: thetips4you/nodeapp:latest
         ports:
         - containerPort: 3000
         
@@ -30,7 +30,7 @@ metadata:
 spec:
   selector:
     app: nodeapp 
-  type: Nodeport
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 5000
